@@ -30,6 +30,9 @@ ____	Number of Cores: (inside "system"->"cpus")
  153	            "cpus": [
  ...
  242	                    "numThreads": 1,
+Q: Why only 1?
+A: This processor model does not support multithreading.
+
 ____	Memory Type:(inside "system"->"cpus")
   66 	        "memories": [
   67          "system.mem_ctrls0", 

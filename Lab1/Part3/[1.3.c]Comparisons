@@ -1,0 +1,16 @@
+1st Change: CPU clock @ 3GHz   <-- @ 2GHz
+MinorCPU:
+	sim_seconds= 0.000024s <-- 0.000026s
+TimingSimpleCPU:
+	sim_seconds= 0.000028s <-- 0.000031s
+
+The cpu frequency is higher, so this is a rational result.
+
+2nd Change: Mem_Type= DDR4_2400_16x4 <-- DDR3_1600_8x8
+MinorCPU:
+	 sim_seconds= 0.000025s      <-- 0.000026s
+TimingSingleCPU:
+	 sim_seconds= 0.000031s      <-- 0.000031s
+
+The memory type and frequency is better and higher,
+thus we see a minor change.
