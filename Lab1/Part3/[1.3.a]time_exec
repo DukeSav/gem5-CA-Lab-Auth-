@@ -1,0 +1,7 @@
+MinorCPU:
+sim_seconds:0.000026
+
+TimingSimpleCPU:
+sim_seconds:0.000031
+
+
