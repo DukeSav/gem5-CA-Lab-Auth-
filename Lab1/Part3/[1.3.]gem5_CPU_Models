@@ -1,21 +1,6 @@
-There are many different gem5 CPU types, 3 of which are:
+There are many different gem5 InOrder CPU types, 2 of which are:
 
-1. atomic
-The AtomicCPU is the version of SimpleCPU that uses atomic memory access.
-
-SimpleCPU versions have the following characteristics:
-+ Holds an architected state.
-+ Implements the following procedures: Interruption checking, fetch requests, pre-execute setup and advancing the PC to next intructions.
-+ Provides an interface to:
-..+ Read/Write PC information, integer/floating point/control registers and memory.
-..+ Record and return the adress of memory access and prefetching.
-..+ Trigger system call and full system functionality.
-
-The atomic memory access is faster than the detailed one. It is used for fast forwarding and warming up
-caches. It returns an approximate time to complete the request without encountering any resource 
-contention or queueing delay. This is implemented by having only one responder to a single request. This way, gem5 is faster, but less precise.
-
-2. minor
+1. minor
 MinorCPU processor model has a fixed pipeline, which is visualized. It is used to model processors with strict in-order execution behaviour. This processor model is not capable of multithreading, but can support it.
 
 MinorCPU pipeline consists of:
@@ -30,7 +15,7 @@ MinorCPU cache consists of:
 + L2
 + WalkCache
 
-3. hpi
+2. hpi
 HPICPU stands for High-Performance In-Order CPU. HPICPU is based on the architecture of MinorCPU adding some extra features.
 
 HPICPU pipeline consists of:
