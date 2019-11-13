@@ -24,3 +24,12 @@ This file included all in-order CPU Models in gem5 and their bried explanation.
 [MinorCPU](http://www.gem5.org/docs/html/minor.html)
 
 [HPICPU](http://www.gem5.org/wiki/images/c/cf/Summit2017_starterkit.pdf)
+
+#### [1.3.a]test_exec 
+This file shows the timing of both CPU Models Simulations
+
+#### [1.3.b]Results_Explained
+This file explains the reasoning behind the two CPU Model differences.
+
+#### [1.3.c]comparisons
+This file explains the comparisons when changing the CPU clock and memory type on both our CPU Models respectively.
