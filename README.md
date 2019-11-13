@@ -19,6 +19,8 @@ This file reports all Basic Characteristics mentioned in [1.1] based on the `con
 This file included all in-order CPU Models in gem5 and their bried explanation.
 
 ##### References:
+[InOrder CPU Model](http://gem5.org/InOrder)
+
 [MinorCPU](http://www.gem5.org/docs/html/minor.html)
 
 [HPICPU](http://www.gem5.org/wiki/images/c/cf/Summit2017_starterkit.pdf)
