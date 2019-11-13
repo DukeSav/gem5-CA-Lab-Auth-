@@ -1,0 +1,112 @@
+Validation of our system's Basic Characteristics through Config.json File:
+
+(line#)	
+____	CPU type: (inside "system"->"cpus")
+ 439	                "type": "MinorCPU",
+
+____	CPU Frequency: (inside "system"->"cpus")
+ 127	    "cpu_cluster": {
+ ...
+ 140	        "clk_domain": {
+ 141		    "name": "clk_domain", 
+ 142		    "clock": [
+ 143		        250{
+ 144		    ], 
+ ...	Until here it is set the system.cpu_cluster.clk_domain equal to 250ps
+	which means that the clock frequency is set to 4 GHz.
+	Afterwards (inside "system"->"cpus") every memory component frequency 
+	is set to the same value: (e.g.):
+ 334 	                    "icache": {
+ ...
+ 356 	                        "clk_domain": "system.cpu_cluster.clk_domain", 
+
+____	Clock Domain: (inside "system")
+  71	"clk_domain": {
+  72		    "name": "clk_domain", 
+  73		    "clock": [
+  74		        1000
+		    ], 
+____	Number of Cores: (inside "system"->"cpus")
+ 153	            "cpus": [
+ ...
+ 242	                    "numThreads": 1,
+____	Memory Type:(inside "system"->"cpus")
+  66 	        "memories": [
+  67          "system.mem_ctrls0", 
+  68          "system.mem_ctrls1"
+  69     ], 
+ ...
+1710	        "mem_ctrls": [
+ ...
+1723	                "tCL": 13750, 
+1724	                "tCK": 1250,
+ ...
+1728	                "name": "mem_ctrls0", 
+ ...
+1790	                "devices_per_rank": 8, 
+ ...
+1807	                "device_bus_width": 8,
+ ...
+1815	                "tRCD": 13750, 
+ ...
+1824	                "tRP": 13750
+
+	Likewise for mem_ctrls1.
+
+	Q: How does this indicate a memory type of "DDR3_1600_8x8"?
+	A: DDR means double data rate and 1600Mhz is the total frequency, so the single frequency is
+	800Mhz. This means a clock time of "tCK"=1250 ps. As far as "tCL" is concerned, this is equivalent
+	to the CAS latency of our RAM and for a DDR3_1600_8x8 it is equal to 13750. Similarly, tRCD and tRP.
+
+____	Number of Memory Channels: (inside "system")
+  66 	        "memories": [
+  67          "system.mem_ctrls0", 
+  68          "system.mem_ctrls1"
+  69      ], 
+ ...
+1710	        "mem_ctrls": [
+ ...
+1771	                "ranks_per_channel": 2, 
+
+____	Physical Memory Size: (inside "system")
+  84	"mem_ranges": [
+  85		"0:2147483647"
+  86	],
+
+____	Cache Line Size: (inside "system")
+ 112	        "cache_line_size": 64, 
+
+____	Cluster Voltage: (inside "system->"cpu cluster")
+ 127        "cpu_cluster": {
+ ...
+ 130            "voltage_domain": {
+ ...
+ 133                "voltage": [
+ 134                   1.2
+ 135               ], 
+
+____	Voltage Domain: (inside "system")
+ 102        "voltage_domain": {
+ ...
+ 105	            "voltage": [
+ 106               3.3
+ 107          ], 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
