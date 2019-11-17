@@ -48,7 +48,7 @@ Python script reading is required for us to fully understand gem5, so this step 
 #### [1.2]Config_Validation
 This task was really helpful to understand how gem5 stores and categorizes its components. Finding the values and code parts was neither easy nor fast, which is how it should have been. Also, its connection to the first task was a nice addition and provided a continuity to the assignment.
 
-### [1.3.]gem5_CPU_Models
+#### [1.3.]gem5_CPU_Models
 This bibliography task was an interesting one. As an architect you need to understand some theoretical principles behind how your and each different CPU model you may use, operates. On the other hand gem5's documentation was not well structured, information was all over the place and some of them were not easily clarified. This may have been our problem due to our inexperience in this subject. Since this question was time consuming, it could have been clarified as [1.3.a].
 
 #### [1.3.a]test_exec
