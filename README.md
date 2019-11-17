@@ -33,3 +33,29 @@ This file explains the reasoning behind the two CPU Model differences.
 
 #### [1.3.c]comparisons
 This file explains the comparisons when changing the CPU clock and memory type on both our CPU Models respectively.
+
+
+## Lab1 Review
+#### [Step1] Gem5 Installation
+The gem5 installation, package installation and all required features were well documented. The process was easily accesible and easily understood.
+
+#### [Step2] Gem5 "greeting"
+The "Hello World" program was really helpful to understand the basic way of running and using gem5. Also the report thoroughly explained all its outputs either on terminal or its stats.txt counterpart
+
+#### [1.1]Basic_configs
+Python script reading is required for us to fully understand gem5, so this step was rightly asked. Most parameters were easily found, but as far as the harder ones we were not sure whether they were needed or not. Asked parameters could have been specified, rather than some of them.
+
+#### [1.2]Config_Validation
+This task was really helpful to understand how gem5 stores and categorizes its components. Finding the values and code parts was neither easy nor fast, which is how it should have been. Also its connection to the first task was a nice addiction and provides a continuity to the assignment.
+
+### [1.3.]gem5_CPU_Models
+This bibliography task was an interesting one. As an architect you need to understand some theoretical principles behind how your and each different CPU model, you may use, operates. On the other hand gem5's documentation was not well structured, information was all over the place and some of them were not easily clarified. This may have been our problem due to our inexperience in this subject. Since this question was rather time consuming, it could have been clarified as [1.3.a].
+
+#### [1.3.a]test_exec
+This task was required for us to fully understand how to use gem5 and its different CPU models. It wasn't easy to run, and reasearch had to be done. On the contrary execution times were asked. We found in stats.txt 2 different "times", and we chose only one of them because the other was for host's system. Also there were data numbers and their rates, dividing them equals to time. This "time" was equal to the previously addressed, so we opted not to add them. All in all this task only needed 2 "time" values, which was rather confusing.
+
+#### [1.3.b]Results_Explained
+This is a theoretical question to [1.3.a] task. Hence gem5's documentation was confusing and not well clarified, it took us some time to conclude the explanation of previous results. Adding to this, our explanation was rather short, thus it is confusing whether it is right or not.
+
+#### [1.3.c]comparisons
+This task was a really nice ending to the basic principles of Computer Architecture. Changing your components to observe how your system operates. The process was rather fun, as you tried many options, more than asked, to see how your system behaves and choose which one fits your case. Seemed like a Computer Architecture component selection in a really small scale, excluding costs and high complexity programs.
