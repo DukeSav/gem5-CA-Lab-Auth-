@@ -5,7 +5,8 @@ There are many different gem5 CPU types, 3 of which are:
 
 SimpleCPU versions have the following characteristics:
 + Holds an architected state.
-+ Implements the following procedures: Interruption checking, fetch requests, pre-execute setup and advancing the PC to next intructions.
++ Implements the following procedures: Interruption checking, fetch requests, pre-execute setup and
+advancing the PC to next intructions.
 + Provides an interface to:
 ..+ Read/Write PC information, integer/floating point/control registers and memory.
 ..+ Record and return the adress of memory access and prefetching.
@@ -17,16 +18,22 @@ There are 2 different versions of SimpleCPU that can be run on their own:
 
 Atomic memory access is faster than the detailed one. It is used for fast forwarding and warming up
 caches. It returns an approximate time to complete the request without encountering any resource 
-contention or queueing delay. This is implemented by having only one responder to a single request. This way, gem5 is faster, but less precise.
+contention or queueing delay. This is implemented by having only one responder to a single request.
+This way, gem5 is faster, but less precise.
 
 1.2 TimingSimpleCPU is the version of SimpleCPU that uses timing memory access
 
-Timing memory access is the most detailed access. It is our best effort to realistically simulate timing. It also includes modelling for queueing delays and resources contention.Timing transactions are composed of two one-way messages, a request and a response. Once a timing request is successfully sent, the device that sent the request will either get the response or a NACK if the request could not be completed. Also, due to the fact that timing requests are not instantaneous, flow control is needed.
+Timing memory access is the most detailed access. It is our best effort to realistically simulate timing. 
+It also includes modelling for queueing delays and resources contention.Timing transactions are composed of 
+two one-way messages, a request and a response. Once a timing request is successfully sent, the device that 
+sent the request will either get the response or a NACK if the request could not be completed. Also, due to 
+the fact that timing requests are not instantaneous, flow control is needed.
 
 Atomic and timing accesses can not coexist in the memory system.
 
 2. minor
-MinorCPU processor model has a fixed pipeline, which is visualized. It is used to model processors with strict in-order execution behaviour. This processor model is not capable of multithreading, but can support it.
+MinorCPU processor model has a fixed pipeline, which is visualized. It is used to model processors with strict 
+in-order execution behaviour. This processor model is not capable of multithreading, but can support it.
 
 MinorCPU pipeline consists of:
 + Fetch1: instruction fetch responsible for fetching cache lines
@@ -51,5 +58,5 @@ HPICPU pipeline consists of:
 HPICPU cache consists of:
 + Same cache with MinorCPU
 + Prefetcher
-+ TLB (Translation Lookaside Buffer), which is part of the Memory Management Unit. It consists of ITB and DTB for instructions and data respectively.
-	
++ TLB (Translation Lookaside Buffer), which is part of the Memory Management Unit. It consists of ITB and DTB 
+for instructions and data respectively.
