@@ -1,1 +1,2 @@
-MinorCPU is slightly faster than TimingSimpleCPU. This is logical since MinorCPU's pipeline has 2 Fetches and TimingSimpkeCPU only has one. Thus makes MinorCPU superior.
+MinorCPU is slightly faster than TimingSimpleCPU. This is logical since MinorCPU's pipeline has 2 Fetches and 
+TimingSimpkeCPU only has one.Thus, makes MinorCPU superior.
