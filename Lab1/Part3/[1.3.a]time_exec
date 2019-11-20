@@ -4,4 +4,5 @@ sim_seconds:0.000026
 TimingSimpleCPU:
 sim_seconds:0.000031
 
-
+host times were not included since they are specific to the host computer
+and are unrelated to the simulated CPU.
