@@ -1,5 +1,7 @@
 # gem5-CA-Lab-Auth-
 
+_Authors: Iason-Georgios Velentzas & Georgios Savvidis_
+
 ## Lab1
 
 ### [1.1]Basic_configs
