@@ -71,6 +71,7 @@ This shows benchmark simulation time and clock parameters when changing CPU Cloc
 
 #### [2.2.1]Simulation_Analysis
 This file shows the whole simulation logic and procedure that was used.
+This file also includes step [2.2.2]Diagram_Figures for total configuration ratings.
 
 [link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.2.1%5D%20Simulation_Analysis.md)
 
@@ -80,7 +81,6 @@ This file shows the whole simulation logic and procedure that was used.
 
 [All R scripts used](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/R_scripts)
 
-#### [2.2.2]DiagramsOfEffect
 This file shows the final diagrams which undermine the behaviour of every benchmark based on every parameter.
 
 [Figures for the Total Diagrams](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/%5B2.2%5D%20DiagramsOfEffect)
