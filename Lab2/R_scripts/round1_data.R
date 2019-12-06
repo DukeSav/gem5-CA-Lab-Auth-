@@ -1,0 +1,28 @@
+setwd("~/my_gem5/spec_results/Results/CSV_round1")
+bzip=read.csv("bzip.csv", header=TRUE)
+mcf=read.csv("mcf.csv", header=TRUE)
+hmmer=read.csv("hmmer.csv", header=TRUE)
+sjeng=read.csv("sjeng.csv", header=TRUE)
+libm=read.csv("libm.csv", header=TRUE)
+
+setwd("~/my_gem5/spec_results/Results/CSV_round2")
+bzip_2=read.csv("res_bzip_2.csv", header=TRUE)
+mcf_2=read.csv("res_mcf_2.csv", header=TRUE)
+hmmer_2=read.csv("res_hmmer_2.csv", header=TRUE)
+sjeng_2=read.csv("res_sjeng_2.csv", header=TRUE)
+libm_2=read.csv("res_libm_2.csv", header=TRUE)
+
+setwd("~/my_gem5/spec_results/Results/CSV_round1")
+bzip_1_new=read.csv("bzip_1_new.csv", header=TRUE)
+mcf_1_new=read.csv("mcf_1_new.csv", header=TRUE)
+hmmer_1_new=read.csv("hmmer_1_new.csv", header=TRUE)
+sjeng_1_new=read.csv("sjeng_1_new.csv", header=TRUE)
+libm_1_new=read.csv("libm_1_new.csv", header=TRUE)
+
+bzip_tot=unique(rbind(bzip_1_new, bzip_2))
+mcf_tot=unique(rbind(mcf_1_new,mcf_2))
+hmmer_tot=unique(rbind(hmmer_1_new,hmmer_2))
+sjeng_tot=unique(rbind(sjeng_1_new,sjeng_2))
+libm_tot=unique(rbind(libm_1_new, libm_2))
+
+setwd("~/my_gem5")
