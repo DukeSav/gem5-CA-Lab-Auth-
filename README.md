@@ -17,8 +17,8 @@ This file reports all Basic Characteristics mentioned in [1.1] based on the `con
 [link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab1/%5B1.2%5DConfig_Validation)
 
 
-###### References:
-[DDR3-1600-8x8 Reference 1](https://github.com/uart/gem5-mirror/blob/master/src/mem/DRAMCtrl.py?fbclid=IwAR2rouQPULwbeunS7y-R05zFbjXAenb0x4-L29RGdlkFvCQezmn5dcK_49o)
+###### References:7
+[DDR3-1600-8x8 Reference 1](https://github.com/uart/gem5-mirror/blob/master/src/mem/DRAMCtrl.py?fbclid=IwAR2rouQPULwbeunSy-R05zFbjXAenb0x4-L29RGdlkFvCQezmn5dcK_49o)
 
 [DDR3-1600-8x8 Reference 2](https://en.wikipedia.org/wiki/DDR3_SDRAM)
 
@@ -53,3 +53,34 @@ This file explains the comparisons when changing the CPU clock and memory type o
 
 [link to cmd instructions](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab1/%5BL1%5Dcmd_instructions.sh)
 
+## Lab2 
+#### [2.1.1]caches
+This file shows the simulation's requested parameters.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.1.1%5D%20caches.md)
+
+#### [2.1.2]benchmark info
+This file shows every benchmark info using the specified CPU configuration.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.1.2%5D%20benchmark%20info.md)
+
+#### [2.1.3]benchmark cpu clock
+This shows benchmark simulation time and clock parameters when changing CPU Clock.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.1.3%5D%20benchmark%20cpu%20clock.md)
+
+#### [2.2.1]Simulation_Analysis
+This file shows the whole simulation logic and procedure that was used.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.2.1%5D%20Simulation_Analysis.md)
+
+[CSV, Figure files & Scripts used for the first Simulation Iterations](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/CSV_round1)
+
+[CSV, Figure files & Scripts used for the second Simulation Iterations](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/CSV_round2)
+
+[All R scripts used](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/R_scripts)
+
+#### [2.2.2]DiagramsOfEffect
+This file shows the final diagrams which undermine the behaviour of every benchmark based on every parameter.
+
+[Figures for the Total Diagrams](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/%5B2.2%5D%20DiagramsOfEffect)
