@@ -1,0 +1,211 @@
+Cost Function Modelling:
+
+The following procedure has been followed:
+Step 1: Admissions and Requirements
+Step 2: Mathematical Modelling
+Step 3: Validation
+
+####Admissions & Requirements:####
+----The variables L1 Cache Instruction and L1 Cache Data 
+	will be treated separately, but they are linearly independent.
+	
+----The variables L1 and L2 are linearly independent.
+Example: Total_Cost=Cost_L1+Cost_L2+...(other terms)
+
+----The attributes Cache_Size and Cache_Associativity are dependent.
+
+----The attributes Block_Size and Cache_Size are dependent.
+
+----Impact of ΔL1_Size in Cost is greater than ΔL2_size
+
+----There are 2 levels of Associativity per Cache_level:
+			L1		L2
+	Low : 2-way	  4-way
+	High: 4-way	  8-way
+	So, impact of low_associativity to L1 is the same with the
+	impact of low_associativity in L2 (though there is no
+	obvious linear dependency between the 2 associativities).
+
+####Mathematical Modelling:####
+
+(The parameters are results from ####Validation####)
+
+#General Cost Function Idea (taking into account the Non-Linearities)
+
+COST(s1_i,s1_d,s2,a1_i,a1_d,a2,bs)=(Cost_L1+Cost_L2)*Cost_Block_Size
+
+--Cost_L1=Cost_size_L1*Cost_assoc_L1=F1(s1_i)*G1(a1_i, s1_i)
+									+F1(s1_d)*G1(a1_d, s1_d)
+--Cost_L2=Cost_size_L2*Cost_assoc_L2=F2(s2)*G2(a2)
+--Cost_Block_Size=H(bs)
+
+#Variables_Domain: (Normalization)
+
+L1_Size_Domain:={8,16,32,64,128}
+--->D_F1:={1,2,3,4,5}*
+
+L2_Size_Domain:={256,512,1024,2048,4096}
+--->D_F2:={1,2,3,4,5}*
+
+L1_Associativity:={2-way,4-way}:={Low,High}
+--->D_G1:={1,2,3}x{1,2,3,4,5}*
+(because it takes Cache Size as input as well)
+
+L2_Associativity:={4-way,8-way}:={Low,High}
+--->D_G2:={1,2}x{1,2,3,4,5}*
+(because it takes Cache Size as input as well)
+
+Cache_Line_Size:={64,128,256}
+--->D_H:={1,2,3}*
+
+*due to the need of non-linear function (=multiplication
+ between variables, we avoided 0 as value)
+  
+The range of each function is set to R.
+It is on purpose as generic as it could be, because we will need
+to make modifications in the range at the 3rd Step (Validation).
+	
+#Function Modelling	(provided R code)
+
+temp="benchmark_data_frame" (e.g. bzip)
+L1_values=levels(factor(temp$I_size))
+--->[1] "8"   "16"  "32"  "64"  "128"
+L2_values=levels(factor(temp$L2_size))
+--->[1] "256"  "512"  "1024" "2048" "4096"
+L1_domain=seq(length(L1_values))
+--->[1] 1 2 3 4 5
+L2_domain=seq(length(L2_values))
+--->[1] 1 2 3 4 5
+
+
+1) L1_Size Cost:
+
+Cost_L1=numeric();
+for (x in L1_domain){
+  Cost_L1[x]=50*2.25^(x-1)
+}
+Cost_L1[x]
+--->[1] 50.0000  112.5000  253.1250  569.5312 1281.4453
+
+Explanation: Here we see the increment of cost, while
+the size increases. It exponential increment.
+Cost of 100 is the base cost, so we set it so that
+L1_data and L1_instruction base costs to sum at 100.
+
+####FUNCTION####
+  F1[s1]=50*2.25^(s1-1)
+
+2) L1 Associativity Cost
+
+Low associativity will have a unit cost.
+
+High associativity:
+
+high_assoc_1=numeric();
+for ( x in L1_domain){
+  if(x<=length(L1_domain){
+    high_assoc_1[x+1]=12*exp(-0.5*x)-0.4
+  }
+}
+high_assoc_1[1]=0
+--->[1] 0.000000 6.878368 4.014553 2.277562 1.224023
+
+Explanation: For cache size of 8kB it doesn't make any
+sense to have 4-way associativity, so cost is set to 0.
+(it is a value we won't find in any simulation ran.)
+So, that's why the 1st value is set to 0. For the other
+ones, they follow an exponential decrement as size of 
+cache increases.
+Why that? We think that increasing associativity in a 
+big cache (e.g. 128kB) it doesn't increase the cost
+THAT MUCH in comparison with a small cache (e.g. 16kB)
+in which complexity rises higher.
+
+####FUNCTION####
+			{ 	1,						if a1==1
+G[a1,s1]=	{	0,						if a1==2, s1==0
+			{	12*exp(-0.5*s1)-0.4,	if a1==2, s1!=0
+			
+			
+3) L2 Size Cost
+
+
+Cost_L2=numeric()
+for (x in L2_domain){
+  Cost_L2[x]=250*(x-0.6)
+  #z2[x]=-10*exp(-x-1)
+}
+--->[1]  100  350  600  850 1100
+
+Explanation: For L2 Cache Size things are simpler. We could
+"roughly" claim that cost increases linearly with the size.
+
+####FUNCTION####
+
+F2(s2)=250*(s2-0.6)
+
+4) L2 Associativity Cost
+
+Low Associativity will have a unit cost.
+
+High Associativity:
+
+high_assoc_2=numeric();
+for ( x in L2_domain){
+  high_assoc_2[length(L2_domain)-x+1]=(x-1)^1.5/4.2+1.2
+  if (x==length(L2_domain)){
+    high_assoc_2[length(L2_domain)-x+1]=
+						2*high_assoc_2[length(L2_domain)-x+1]
+  }
+}
+high_assoc_2
+--->[1] 6.209524 2.437179 1.873435 1.438095 1.200000
+
+Explanation: Similar philosophy with L1 associativity,
+achieved through logarithmic decrement this time (equivalent).
+
+####FUNCTION####
+
+			{					 1,		if a2==1
+G2(s2,a2)=	{	(s2-1)^1.5/4.2+1.2,		if a2!=1, s2!=1
+			{2*(s2-1)^1.5/4.2+1.2),		if a2!=1, s2==1
+
+5) Block Size
+
+C_bs=numeric()
+for (x in BS_domain){
+  if (x==1){
+    C_bs[x]=x^2
+  } else{
+    C_bs[x]=(x+3)^2
+  }
+}
+C_bs
+--->[1]  1 25 36
+
+Explanation: Here the values are set as values of a squared 
+function and express the great complexity that cache line 
+sizes of 128 and 256 bytes have. So, even if you have the 
+simplest Cache Sizes and Associativities, it is still more 
+"expensive" to build a cache line size of 256 kB, than to 
+have the most complex Cache Size and Associativity, 
+but Block Size of 64 bytes.
+
+####FUNCTION####
+		{		bs^2, 		if bs==1
+H(bs)={
+		{	(bs+3)^2,		if bs!=1
+		
+The result can be seen in the folder Cost_Plots.
+
+Some Values to be presented here:
+
+For the sjeng Benchmark:
+    L1_cost          L2_cost        Total_cost        
+Min.   : 100.0   Min.   : 100.0   Min.   :   200  
+1st Qu.: 773.8   1st Qu.: 621.0   1st Qu.:  1755  
+Median :1269.3   Median :1100.0   Median :  2663  
+Mean   :1248.0   Mean   : 895.6   Mean   : 34324  
+3rd Qu.:1681.0   3rd Qu.:1222.4   3rd Qu.: 72455  
+Max.   :3137.0   Max.   :1320.0   Max.   :160453  
+
