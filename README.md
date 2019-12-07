@@ -81,6 +81,19 @@ This file also includes step [2.2.2]Diagram_Figures for total configuration rati
 
 [All R scripts used](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/R_scripts)
 
-This file shows the final diagrams which undermine the behaviour of every benchmark based on every parameter.
+#### [2.2.2]Simulation_Diagrams
+These files show the final diagrams which undermine the behaviour of every benchmark based on every parameter.
 
 [Figures for the Total Diagrams](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/%5B2.2%5D%20DiagramsOfEffect)
+
+#### [2.3]Cost_Function
+In this file you can see the procedure followed to model the Cost_Function and the rationale behind it
+[Cost_Function_Procedure](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/%5B2.2%5D%20DiagramsOfEffect)
+
+Some plots that demonstrate the behavior of this function under certain parameters configured.
+
+[Plots_of_Cost](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/%5B2.2%5D%20DiagramsOfEffect)
+
+
+
+
