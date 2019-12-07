@@ -209,3 +209,12 @@ Mean   :1248.0   Mean   : 895.6   Mean   : 34324
 3rd Qu.:1681.0   3rd Qu.:1222.4   3rd Qu.: 72455  
 Max.   :3137.0   Max.   :1320.0   Max.   :160453  
 
+Comments on Plots:
+As we can see for low CPI Values, we have different Cost Values,
+which is logical, because there are configurations that
+give the same result, but some are better than the other.
+Also, we see a tendency, as CPI increases (worst performance), we
+have lower cost as well (it is easier to achieve these CPIs).
+
+The overall curve that is found in all the plots (for two
+different Benchmarks) seems to simulate in a good way the actual cost.
