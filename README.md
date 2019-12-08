@@ -95,6 +95,7 @@ The plits are for 2 of the Benchmarks and for 2 different values of Block_Size.
 
 [Plots_of_Cost](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/Cost_Plots)
 
-
-
+#### [2.3]Cost_Function_2
+In this file you can see the procedure followed to model the Cost_Function for the second time and the rationale behind it
+[Cost_Function_2_Procedure](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.3%5D%20Cost%20Function_2.md)
 
