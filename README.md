@@ -99,3 +99,11 @@ The plits are for 2 of the Benchmarks and for 2 different values of Block_Size.
 In this file you can see the procedure followed to model the Cost_Function for the second time and the rationale behind it
 [Cost_Function_2_Procedure](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.3%5D%20Cost%20Function_2.md)
 
+##### References
+[gem5 Options](http://gem5.org/Running_gem5?fbclid=IwAR02b7hjfnl2kE4V0OERKJ3SkCIoYpphi0vaF_f5XjJYMPA6Qly9hMBojys)
+
+[Published specCPU2006 Simulations on various CPUs](https://www.spec.org/cpu2006/results/cint2006.html?fbclid=IwAR1maHonZUh6oLhSujRqPHt11gIxMT-wpjjLAQeBolON8w3rn9juKU0kq0Q)
+
+[Thorough Report on CPU architecture](https://akkadia.org/drepper/cpumemory.pdf?fbclid=IwAR3-7uozhX6LCHK6u5rYGZcqurjTzKQ8OCe66hs7vnn-dyb4PCumUbQHFTk)
+
+[specCPU2006 Simulations on a specific CPU and Conclusions](https://www.ece.lsu.edu/lpeng/papers/isast08.pdf?fbclid=IwAR02b7hjfnl2kE4V0OERKJ3SkCIoYpphi0vaF_f5XjJYMPA6Qly9hMBojys)
