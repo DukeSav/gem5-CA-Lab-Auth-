@@ -98,7 +98,7 @@ Some plots that demonstrate the behavior of this function under certain paramete
 
 [Plots_of_Cost](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/Cost_Plots)
 
-##### References
+#### References
 [gem5 Options](http://gem5.org/Running_gem5?fbclid=IwAR02b7hjfnl2kE4V0OERKJ3SkCIoYpphi0vaF_f5XjJYMPA6Qly9hMBojys)
 
 [Published specCPU2006 Simulations on various CPUs](https://www.spec.org/cpu2006/results/cint2006.html?fbclid=IwAR1maHonZUh6oLhSujRqPHt11gIxMT-wpjjLAQeBolON8w3rn9juKU0kq0Q)
