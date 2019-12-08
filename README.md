@@ -90,14 +90,13 @@ These files show the final diagrams which undermine the behaviour of every bench
 In this file you can see the procedure followed to model the Cost_Function and the rationale behind it
 [Cost_Function_Procedure](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B3%5D%20Cost%20Function)
 
-Some plots that demonstrate the behavior of this function under certain parameters configured.
-The plits are for 2 of the Benchmarks and for 2 different values of Block_Size.
-
-[Plots_of_Cost](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/Cost_Plots)
-
 #### [2.3]Cost_Function_2
 In this file you can see the procedure followed to model the Cost_Function for the second time and the rationale behind it
 [Cost_Function_2_Procedure](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab2/%5B2.3%5D%20Cost%20Function_2.md)
+
+Some plots that demonstrate the behavior of this function under certain parameters configured.
+
+[Plots_of_Cost](https://github.com/DukeSav/gem5-CA-Lab-Auth-/tree/master/Lab2/Cost_Plots)
 
 ##### References
 [gem5 Options](http://gem5.org/Running_gem5?fbclid=IwAR02b7hjfnl2kE4V0OERKJ3SkCIoYpphi0vaF_f5XjJYMPA6Qly9hMBojys)
