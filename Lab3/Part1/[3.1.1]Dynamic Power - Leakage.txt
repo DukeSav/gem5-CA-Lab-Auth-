@@ -1,0 +1,30 @@
+## McPAT
+Processor:  
++ Peak Dynamic: 98.1063(W)
++ Runtime Dynamic: 72.9199(W)
++ Total Leakage: 16.8319(W)
+
+## Bibliography
+### dynamic power
+The dynamic power consumption originates from the activation of CPU logic gates.  
+Dynamic Power is approximately:  
+Pdyn = C * V^(2) * f
+
+where C is capacitance, f is frequency and V is voltage.
+
+Dynamic Power is mainly dependant to the CPU frequency. 
+
+### leakage
+Power consumption due to leakage power emanates at a micro-level in transistors. The magnitude of the transistor currents depend on the state of the transistor, its dimensions, physical properties and sometimes temperature. The total amount of leakage currents tends to inflate for increasing temperature and decreasing transistor sizes.
+
+Leakage current is mainly dependant to the CPU supply voltage. 
+
+## Programs
+Since dynamic power consuption is dependant to the CPU gates, each different program activates different number of logic gates, thus has different levels of dynamic power consumption. The more the logic gate switching, the more dynamic power consumption.
+
+On the other hand, leakage is not affected by the program, it is continuous. Thus, it is not affected by different programs.
+
+
+For different program times, dynamic power is not surely affected, because of its dependance to logic gate activation.
+
+But leakage power will be increased, due to its continuous nature. Thus, the total leakage power consumption will be linear to the program's time.

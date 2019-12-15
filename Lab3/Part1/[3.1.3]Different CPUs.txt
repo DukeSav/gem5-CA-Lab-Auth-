@@ -1,0 +1,15 @@
+If we consider the previous task's allegation. The metric used is:  
+(Ein - PowerConsumption*TimeTask)/Ein
+
+From McPAT's results, power consumption is:
++ Xeon: TotalLeakage + RuntimeDynamic = 36.8319 + 72.9199 = 109.7518(W)
++ ARM_A9: TotalLeakage + RuntimeDynamic = 0.108687 + 2.9653 = 3.069217(W)
+
+Also, Xeon's task time is 40 times smaller than ARM_A9.
+WLOG we assume that task time of Xeon is T.
+
+Thus, using the metric:
++ Xeon: 1 - (109.7519 * T) / Ein
++ ARM_A9: 1 - (3.069217 * 40 * T) / Ein = 1 - (122.76868 * T) / Ein
+
+We can easily conclude that ARM_A9 has a better energy efficiency than Xeon.

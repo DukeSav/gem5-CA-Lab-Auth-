@@ -1,0 +1,7 @@
+If we consider a metric of Eout/Ein, where Ein is the same for each CPU.  
+Eout is Ein - PowerConsumption*TimeTask  
+So if the PowerConsumption*TimeTask is smaller the specified CPU is considered the more energy efficient.
+
+The second CPU has a much higher Power Consumption, thus need a much lower task time to be more energy efficient. Task time is related to CPU Performance(frequency, core count, cache configuration etc.).
+
+Even though McPAT provides us with power consumption, it does not provide us with task completion time. Consequently we cannot conclude which CPU is more energy efficient.
