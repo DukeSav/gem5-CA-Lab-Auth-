@@ -1,0 +1,25 @@
+## Area
+Area is simply given by McPAT. We simply add:  
+CPU_Area + L2_Area
+
+## Delay
++ CPI
++ Total_time
++ Do we have a time metric for each component in stats.txt?
++ AMAT?
++ The previously developed Performance function? (I mean, why not)
+
+
+## Energy
+Energy is extracted by the McPAT output. By adding: 
+Total_Power_Consumption = Runtime_Dynamic + Subthreshold_Leakage + Gate_Leakage
+
+These parameters are calculated in Watts,
+but we need to have the energy.
+To calculate this we simply multiply the total power consuption (Watts)
+to the total execution time given by the gem5.
+
+So the total energy is:  
+Total_Energy = Total_Power_Consumption * Total_Time
+
+
