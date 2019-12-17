@@ -3,12 +3,7 @@ Area is simply given by McPAT. We simply add:
 CPU_Area + L2_Area
 
 ## Delay
-+ CPI
-+ Total_time
-+ Do we have a time metric for each component in stats.txt?
-+ AMAT?
-+ The previously developed Performance function? (I mean, why not)
-
+CPI is considered an adequate metric for the delay of our system. CPI characterises the whole system, hence we will be using it in both the CPU and L2 as is.
 
 ## Energy
 Energy is extracted by the McPAT output. By adding: 
