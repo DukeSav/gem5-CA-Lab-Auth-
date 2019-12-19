@@ -106,3 +106,33 @@ Some plots that demonstrate the behavior of this function under certain paramete
 [Thorough Report on CPU architecture](https://akkadia.org/drepper/cpumemory.pdf?fbclid=IwAR3-7uozhX6LCHK6u5rYGZcqurjTzKQ8OCe66hs7vnn-dyb4PCumUbQHFTk)
 
 [specCPU2006 Simulations on a specific CPU and Conclusions](https://www.ece.lsu.edu/lpeng/papers/isast08.pdf?fbclid=IwAR02b7hjfnl2kE4V0OERKJ3SkCIoYpphi0vaF_f5XjJYMPA6Qly9hMBojys)
+
+#### [3.1.1]Dynamic Power - Leakage
+In this file you can see description on dynamic power and leakage, as well their behaviour in programms.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab3/Part1/%5B3.1.1%5DDynamic%20Power%20-%20Leakage.md)
+
+#### [3.1.2]Energy
+In this file you can see how energy efficiency is modeled how each parameter affects it.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab3/Part1/%5B3.1.2%5DEnergy.md)
+
+#### [3.1.3]Different CPUs
+In this file each CPU's energy efficiency is calculated.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab3/Part1/%5B3.1.3%5DDifferent%20CPUs.md)
+
+#### [3.2.1]EDAP Calculation
+In this file Area, Delay and Energy is modeled based on parameters the two simulators provide us.
+
+[link](https://github.com/DukeSav/gem5-CA-Lab-Auth-/blob/master/Lab3/Part2/%5B3.2.1%5DEDAP%20Calculation.md)
+
+#### [3.2.2]  McPAT configs
+In this file we get all cofiguration from Lab2, run them with McPAT and plot their results.
+
+[link]()
+
+#### [3.2.3] Cost Function - EDAP
+In this file EDAP is calculated based on the modeling explained in [3.2.1]. Results are plotted and compared to the Lab 2 cost function
+
+[link]()
