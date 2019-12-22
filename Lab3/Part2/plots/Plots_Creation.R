@@ -295,4 +295,12 @@ mcpat_data[,15]=mcpat_data[,8]*mcpat_data[,10]*mcpat_data[,14]*mcpat_data[,14]+ 
               axis(2,at=yticks,cex.axis=0.6, las=1)
               axis(1,at=xticks,cex.axis=0.75, las=1)
               dev.off()
-          
+              
+                x=mcpat_data$Block;xlab='BlockSize';xticks=unique(x);
+                y=mcpat_data$EDAP;ylab='EDAP';ytick=unique(y);yticks=c(min(ytick),max(ytick));
+                png(sprintf("%s_%s.png",ylab,xlab), width=3.5, height=3.25, units="in", res=1200)
+                plot(x, y,xaxt='n',yaxt='n', xlab=xlab, ylab = ylab,
+                     main=sprintf("%s Effect on %s",xlab,ylab), cex=0.8)
+                axis(2,at=yticks,cex.axis=0.9, las=1)
+                axis(1,at=xticks,cex.axis=0.75, las=1)
+                dev.off()
